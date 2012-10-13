@@ -24,3 +24,29 @@ unsigned long BlockBits(int iLength, int iStartBt)
 
 	return ulNumber;
 }
+
+/**
+*@brief		This function according to task ¹17 calculate absolute value 
+*			subtraction two numbers
+*@param		[uNumber1,lNumber2] two numbers
+*@return	long
+*/
+long AbsSub(long lNumber1, long lNumber2)
+{
+	long lResult;
+	lResult = lNumber1 - lNumber2;
+	lResult = ((lResult >> 31) ^ lResult) - (lResult >> 31);
+	return lResult;
+}
+
+/**
+*@brief		This function according to task ¹18 checked whether the number has
+*			two 1 bits successively
+*@param		[uNumber] numbers
+*@return	bool
+*/
+bool CheckNumBt(unsigned long lNumber)
+{
+	return !(lNumber & (lNumber >> 1));
+}
+

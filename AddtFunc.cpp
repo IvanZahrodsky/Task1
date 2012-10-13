@@ -36,8 +36,7 @@ bool CheckNumBits(int iNumBits)
 void PrintBin( unsigned long  ulNumber)
 {
 	cout << "\n";
-	int iCount = sizeof(unsigned long) * 8;
-	for( int i = iCount - 1; i >= 0 ; i--)
+	for( int i = 31; i >= 0 ; i--)
 	{
 		cout << ((ulNumber >> i ) & 1);
 	}
