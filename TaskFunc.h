@@ -21,7 +21,7 @@ unsigned long BlockBits(int iLength, int iStartBt);
 /**
 *@brief		This function according to task ¹17 calculate absolute value 
 *			subtraction two numbers
-*@param		[uNumber1,lNumber2] two numbers
+*@param		[lNumber1,lNumber2] two numbers
 *@return	long
 */
 long AbsSub(long lNumber1, long lNumber2);
@@ -29,10 +29,24 @@ long AbsSub(long lNumber1, long lNumber2);
 /**
 *@brief		This function according to task ¹18 checked whether the number has
 *			two 1 bits successively
-*@param		[uNumber] numbers
+*@param		[lNumber] number
 *@return	bool
 */
-bool CheckNumBt(unsigned long lNumber);
+bool CheckNumBt(unsigned long ulNumber);
 
+
+/**
+*@brief		This function according to task ¹19 changes every 4 bits
+*@param		[ulNumber] number
+*@return	void
+*/
+void ChangeBits(unsigned long &ulNumber);
+
+/**
+*@brief		This function according to task ¹20 implements cyclic shift left
+*@param		[ulNumber,iCntBits] number and count of bits
+*@return	void
+*/
+void ROL(unsigned long &ulNumber,int iCntBits);
 
 #endif  //_TASK_FUNC_H_

@@ -45,8 +45,28 @@ long AbsSub(long lNumber1, long lNumber2)
 *@param		[uNumber] numbers
 *@return	bool
 */
-bool CheckNumBt(unsigned long lNumber)
+bool CheckNumBt(unsigned long ulNumber)
 {
-	return !(lNumber & (lNumber >> 1));
+	return !(ulNumber & (ulNumber >> 1));
 }
 
+/**
+*@brief		This function according to task ¹19 changes every 4 bits
+*@param		[ulNumber] number
+*@return	void
+*/
+void ChangeBits(unsigned long &ulNumber)
+{
+	ulNumber = ((ulNumber & 0xF0F0F0F0) >> 4) | ((ulNumber & 0x0F0F0F0F) << 4);
+}
+
+
+/**
+*@brief		This function according to task ¹20 implements cyclic shift left
+*@param		[ulNumber,iCntBits] number and count of bits
+*@return	void
+*/
+void ROL(unsigned long &ulNumber,int iCntBits)
+{
+	ulNumber = (ulNumber << iCntBits) | (ulNumber >> (32 - iCntBits));
+}

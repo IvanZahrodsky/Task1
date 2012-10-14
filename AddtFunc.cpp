@@ -16,7 +16,7 @@
 */
 bool CheckNumBits(int iNumBits)
 {
-	if(iNumBits > 31)
+	if(iNumBits > 32 || iNumBits < 0)
 	{
 		cout << " The number of bits is out of range! \n";
 		return false;
