@@ -11,6 +11,7 @@
 #define _ADDT_FUNC_H_
 
 #include <iostream>
+#include "TaskFunc.h"
 
 using namespace std;
 
@@ -19,7 +20,7 @@ using namespace std;
 *@param		[iNumBits]	Number of bits
 *@return	The result of checking
 */
-bool CheckNumBits(int iNumBits);
+bool CheckNumBits ( int );
 
 
 /**
@@ -27,9 +28,13 @@ bool CheckNumBits(int iNumBits);
 *@param		[Number]	Number
 *@return	void	
 */
-void PrintBin( unsigned long ulNumber);
-
-
+void PrintBin( UL );
+/**
+*@brief		This function implements interface
+*@param		[void]
+*@return	void	
+*/
+void Running ( void );
 
 #endif  //_ADDT_FUNC_H_
 
